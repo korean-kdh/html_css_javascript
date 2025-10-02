@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포지셔닝</title>
+  <!-- 절대위치는 브라우저 회면 영역(viewport)의 원점(0.0)을 기준으로 위치를 설정합니다.
+   브라우저의 왼쪽 위 모서리를 기준으로 오른쪽은 x축으로 양의 방향, 아래쪽은 Y축으로 양의 방향입니다.
+   일반적인 수학의 좌표 체계와 조금 다르니 주의하세요. 절대 위치(absolute)에는 주의할 점이 있는데
+   콘텐츠의 흐름에서 제외되낟는 것입니다. 절대위치를 적용했을 때의 결과 이미지를 보면 절대위치가 
+   적용된 요소 아래쪽 요소가 절대위치가 적용된 요소의 높이 공간을 메우고 있습니다. -->
+<style>
+    body {
+      margin: 0;
+      background-color: #333;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    div.relative {
+      background-color: lightcoral;
+      position: relative;
+      top: 50px;
+      left: 50px;
+    }
+
+    div.absolute {
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <div class="relative"></div>
+  <div class="absolute"></div>
+  <div class="relative"></div>
+</body>
+</html>

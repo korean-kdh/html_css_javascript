@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- 이러한 float 속성이 정의되었을 때 그 다음에 오는 요소를 정상적으로 위치시키려면
+clear 속성을 이용합니다. float: left;를 해제하려면 clear: left;로 하고, float: right;
+를 해제하려면 clear: rigth;로 합니다. 양쪽을 한꺼번에 해제하려면 clear: both;를 사용합니다. -->
+  <style>
+    #header {
+      height: 100px;
+      background-color: lightblue;
+    }
+
+    #nav {
+      height: 300px;
+      width: 30%;
+      background-color: lightpink;
+      float: left;
+    }
+
+    #main {
+      height: 300px;
+      width: 70%;
+      background-color: lightgreen;
+      float: left;
+      opacity: 0.7;
+    }
+
+    #footer {
+      height: 100px;
+      background-color: lightcoral;
+    }
+  </style>
+</body>
+  <div class="container">
+    <div id="header"></div>
+    <div id="nav"></div>
+    <div id="main"></div>
+    <div id="footer"></div>
+  </div>
+</html>

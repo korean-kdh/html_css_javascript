@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수::const</title>
+</head>
+<!-- 3 유효한 범위로 블록 스코프 가짐
+ let의 특성과 같이 블록 스코프를 유효 범위를 갖습니다. -->
+<body>
+  <script>
+    // 스코프(scope 범위) 문제
+    const age = 22;
+    {
+      const age = 33;
+      console.log('age* ' + age); // 33
+    }
+    console.log('age** ' + age); // 22
+  </script>
+</body>
+</html>

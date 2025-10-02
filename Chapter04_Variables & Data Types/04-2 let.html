@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수::let</title>
+</head>
+<!-- 1. let 키워드
+ let은 블록 스코프의 범위를 갖는 지역 변수를 선언하며, 선언과 동시에 임의의 값으로 초기화할 수 있습니다.
+ 1) 한 번 선언하면 동일한 변수 이름으로 다시 선언될 수 없음(재선언 불가)
+ 2) 재할당은 가능하나 사용하기 전에 반드시 선언되어야함
+ 3) 유효한 범위로 블록 스코프를 가짐
+ 
+ 1. 한 번 선언하면 동일한 벼수 이름으로 다시 선언될 수 없음(재선언 불가)
+ let 키워드로 동일한 이름의 변수를 선언할 수 없습니다. 콘솔 창에 'name'변수(식별자)가
+ 선언되었기 때문에 재선언할 수 없다는 문법 오류가 발생했습니다.
+ 
+
+<body>
+  <script>
+    let name = '홍길동';
+    // 동일한 변수명으로 재선언 불가
+    let name = '일지매';
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>const2</title>
+</head>
+<!-- 2. 한 번 선언하면 값을 변경할 수 없음(재할당 불가)
+ const 키워드는 값을 변경할 수 없는 상수(constant)인 경우에 선언하여 사용합니다.
+ 따라서 초기 설정된 값을 바꾸는 재할당은 오류가 발생합니다.
+
+ const는 변수명 선언과 함께 반드시 초기값을 할당해야 합니다. 반면 let의 경우엔 초기
+ 값이 할당되지 않으면 경우 'underfined'가 할당되고 오류가 발생하지 않습니다.
+ 
+ -->
+<body>
+  <script>
+    const name = '홍길동';
+    // 동일한 변수명에 재할당 불가
+    name = '일지매';
+  </script>
+</body>
+</html>

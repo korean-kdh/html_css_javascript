@@ -1,0 +1,31 @@
+03-4 함수와 메서드
+함수(function)는 어떤 기능을 수행하기 위해 디자인된 일련의 명령어 모음으로 재활용을 위해 사용되는 방법입니다.
+메서드(method)는 특정 객체(object)와 연관된 명령어의 모음으로 객체의 동적 속성으로 사용됩니다.
+자바 등 객체지향 프로그래밍 언어에서 객체를 기술하는 클래스(class)는 객체의 상태를 나타내는 데이터인
+필드(field, 속성 또는 멤버변수)와 객체의 행위를 나탄내는 함수인 메서드로 구성됩니다. 
+
+함수는 수행할 기능을 정의하는 부분(함수 블록)과 이를 사용하는 호출 부분으로 나눌 수 있으며, 
+매개변수(parameter)로 함수 외부로부터 전달되는 값을 사용하거나 함수의 수행 결과를 반환(return)
+할 수도 있습니다.
+해당 객체(object)의 메서드를 사용하는 형식은 속성 접근자(property accessor)인 점(dot)을
+이용하여 다음과 같이 표현합니다. 
+객체.메서드();
+var msg = 'HELLO world';
+var msg1 = msg.toLowerCase(); // hello world
+var msg2 = mag.toUpperCase(); // HELLO WORLD
+
+자바스크립트에서 객체 간에는 위아래 등급 관계인 위계(hierarchy)가 있습니다. 최상위 객체를 window로
+하는 계층적 관계를 구성합니다. 최상위 객체인 window 객체는 전역(global) 객체라고도 합니다.
+window 객체의 하위 객체로 DOM(Document object Model), BOM(Browser Object Model), 내장 객체
+(built-in Object) 등이 있습니다. HTML에서 루트 요소(root element)를 <html>로 하고, 그 아래
+<head>와 <body>가 구성되는 형태와 같다고 하겠습니다. 이때 루트 요소가 객체 위계에서 가장 높은
+최상위 객체와 같습니다. 
+window 객체에도 메서드가 있는데, 이 메서드를 사용할 때는 window 객체를 명시하지 않아도 됩니다.
+최상위 객체의 특권이랄까요? 나중에 등장할 예제에서 표현을 확인하세요.
+
+// window 객체의 메서드 호출
+setTimeout(sayHello, 1000);
+
+function sayHello() {
+  alert('안녕하세요?');
+}

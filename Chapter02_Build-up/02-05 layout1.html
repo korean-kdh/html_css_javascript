@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃</title>
+  <!-- 콘텐츠와 영역의 배치 등을 다루는 레이아웃(layout) 기술에는 앞서 살펴봤던 플로팅(floating)과
+   포지셔닝(positioning) 외에 플렉스(flex), 그리드(grid), 컬럼(column) 등
+   의 CSS 속성과 영역을 표현하기 위해 사용하는 시맨틱(semantic)요소가 있습니다. -->
+   <!-- #nav와 #main 영역은 가운데에서 왼쪽과 오른쪽으로 붙어야 하지만, <div>가 블록요소이기에 
+    각각 새로운 줄에서 영역을 시작하고 있습니다. 앞서 살펴봤던 플로팅(float)속성으로 해결할 수 있습니다. -->
+  <style>
+    #header {
+      height: 100px;
+      background-color: lightblue;
+    }
+
+    #nav {
+      height: 300px;
+      width: 30%;
+      background-color: lightpink;
+    }
+
+    #main {
+      height: 300px;
+      width: 70%;
+      background-color: lightgreen;
+    }
+
+    #footer{
+      height: 100px;
+      background-color: lightcoral;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="header"></div>
+    <div id="nav"></div>
+    <div id="main"></div>
+    <div id="footer"></div>
+  </div>
+</body>
+</html>

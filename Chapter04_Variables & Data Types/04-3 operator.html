@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>operator</title>
+</head>
+<!-- 연산자(operator)는 사칙 연산 등 셈을 하거나 논리 연산, 할당 등을 위한 기호(stmbol)로 
+ 더하기(+), 빼기(-), 나누기(/), 곱하기(*) 등 있습니다.
+ +  더하기
+ -  빼기
+ *  곱하기
+ ** 거듭제곱
+ /  나누기
+ %  나머지
+ ++ 중가
+ -- 감소
+여기서 거듭제곱(**), 나머지(%), 증가 및 감소 연산자에 대하여 예제로 살펴봅니다.
+'5**3'은 5의 3제곱(5^3)이며, '5%3'은 앞의 숫자(5)를 뒤의 숫자(3)로 나눈 나머지 값을 취하므로
+결과는 2가 됩니다. 증가 및 감소 연산자는 할당된 변수의 값에서 1을 증가하거나 1을 감소하여 
+그 결과를 나타냅니다.
+
+산술 연산자의 사용 예시
+연산자              연산식          결과  
+거듭제곱(**)        5**3            125
+나머지(%)           5%3             2
+증가(++)            5++             6
+감소(--)            5--             4
+
+  -->
+<body>
+  <script>
+    document.querySelector('#exp').innerHTML = 5 ** 3;
+    document.querySelector('#mod').innerHTML = 5 % 3;
+
+    var x = 5, y = 5;
+    x++;
+    y--;
+    var inc = x;
+    var dec = y;
+    document.querySelector('#inc').innerHTML = inc;
+    document.querySelector('#dec').innerHTML = dec;
+  </script>
+<!-- 왼쪽과 오른쪽이 같음을 나타내는 연산 기호인 이퀄(equal, =)은 프로그램에선 할당
+연산자로, '='의 오른쪽 항의 결과를 왼쪽에 할당하는 역할을 합니다. 동등한 의미로 쓰일
+때는 '='을 하나 더 붙여 '=='로 표현하고, 값은 같은지 아닌지를 참(true)/거짓(false)으로 표현합니다
+또한 '='3개를 연속으로 붙여 쓰면 값뿐만 아니라 데이터 타입도 같은지를 참/거짓으로 나타냅니다
+[5 == '5']에서 슛저 5와 문자열 '5'는 값은 같지만, 서로 데이터 타입이 달라 거짓(false)이 됩니다. -->
+</body>
+</html>

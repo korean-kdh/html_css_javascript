@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성 선택자</title>
+<!-- HTML 요소(element)의 부가적인 정보로서 속성(attribute)을 식별자로 
+사용하는 방법입니다. 속성은 속성 이름(attribute name)과 속성값(attribute value)
+으로 정의됩니다. CSS에서 [속성이름], [속성이름=속성값]으로 표현됩니다.
+[name]은 속성 이름이 name인 모든 요소를, [name=passwd]는 속성 이름이 name
+인 요소 중에서 속성값이 passwd인 특정 요소를, input[name=passwd]는 <input>
+중에서 속성 이름이 name인 요소를 대상으로 속성값이 passwd인 특정 요소를 가리키는
+선택자입니다. 특정 요소를 가리키는 선택자의 구성이 구체화될수록 선택자가 
+적용되는 우선순위가 높아지는데, 이를 명시도(CSS specificity)라고 합니다. -->
+
+<!-- 속성 선택자 미리보기 나오지 않는다 chat gpt를 사용하지 말고 왜인지 알아보시오. 
+<title>속성 선택자/title>로 되어 있어서 안됬음
+<title>속성 선택자/title> 이렇게 잘못 닫혀 있어서 HTML이 깨진 거
+HTML에서 <title> 태그는 반드시 짝이 맞게 닫아야 합니다. 즉: <title>속성 선택자</title>
+처럼 <title> → </title>로 정확히 닫혀야 브라우저가 문서 제목을 올바르게 인식합니다. -->
+      
+      
+      <style>
+      [name] {
+        width: 200px;
+        padding: 5px 10px;
+        border: 1px solid lightcoral;
+      }
+
+      [name=passwd] {
+        border: 1px solid lightgrey;
+      }
+
+      input[name=passwd] {
+        border: 2px solid lightgreen;
+      }
+    </style>
+<!-- 식별자(identifier)는 프로그래밍이나 데이터베이스,
+컴퓨터 시스템에서 어떤 대상(변수, 함수, 객체, 테이블, 사용자 등)을 구별하기 위해 붙이는 이름이나 번호 -->
+</head>
+<body>
+  <input type="text" name="userId" placeholder="아이디 입력">
+  <hr>
+  <input type="text" name="passwd" placeholder="비밀번호 입력"
+</body>
+</html>

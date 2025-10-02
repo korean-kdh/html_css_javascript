@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 절대위치(absolute)에는 또 하나의 중요한 특성이 있습니다. 절대위치를 지정된 요소의 부모
+   (parent)나 조상(ancestors)요소가 상대위치(relative)로 지정되는 경우, 절대위치가 기준으로 
+   하는 원점이 브라우저의 원점(0.0)에서 해당 부모나 조상의 기준점으로 변경됩니다.
+   절대위치(absolute) 2개를 만들어 하나는 독립적인 위치에 두고, 나머지 하나는 상대위치(relative)의
+   자식(child) 요소로 만들어 테스트합니다.
+   독립적인 위치에 있는 절대위치는 브라우저의 원점을 기준으로 위치를 설정하는데 반해, 상대위치의
+   자식 요소인 절대위치는 상대위치 요소의 기준점을 원점으로 설정하여 이로부터 위츨 계산하게 됩니다. -->
+<style>
+    body {
+      margin: 0;
+      background-color: #333;
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    div.relative {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      background-color: lightcoral;
+    }
+
+    div.absolute {
+      width: 80px;
+      height: 150px;
+      background-color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <div class="relative">
+    <div class="absolute"></div>
+  </div>
+  <div class="absolute"></div>
+</body>
+</html>

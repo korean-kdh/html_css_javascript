@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<!-- HTML5 문서임을 선언하는 부분 -->
+
+<html lang="en">
+<!-- 문서의 언어를 영어(en)로 설정 -->
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 문서의 문자 인코딩 방식을 UTF-8로 지정 (한글, 영어 등 다양한 문자 사용 가능) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 모바일/반응형 화면에서 화면 크기를 기기 너비에 맞추고 확대 배율을 1로 설정 -->
+
+  <title>박스모델2</title>
+  <!-- 브라우저 탭에 표시되는 문서 제목 -->
+   
+<!-- CSS의 box-sizing 속성을 이용하면 W3C 박스 모델과 인터넷 익스플로러의 
+박스 모델을 선택할 수 있는데 기본값은 W3C 박스 모델의 너비값 산정 기준인 
+content-box입니다.
+명시적으로 속성과 속성갓을 표시하지 않으면, 기본값을 적용하여 화면에 적용합니다.
+아이디(id) 속성의 borderBox에 box-sizing 속성값을 border-box로 설정하면, 
+인터넷 익스플로러의 너비값 산정 기준을 적용하여 패딩값으로 인해 콘텐츠의 
+너비값이 100px로 결정됨을 확인할 수 있습니다. -->
+
+    <style>
+    #contentBox, #borderBox { /* contentBox와 borderBox라는 id를 가진 요소에 공통 스타일 적용 */
+      width: 200px; /* 요소의 너비를 200픽셀로 지정 */
+      height: 100px; /* 요소의 높이를 100픽셀로 지정 */
+      margin: 10px 0; /* 위/아래 여백은 10px, 좌/우는 0 */
+      padding: 0 50px; /* 위/아래 패딩은 0, 좌/우 패딩은 50px */
+      background-color: lightcoral; /* 배경색을 연한 빨강(코랄색)으로 지정 */
+    }
+    #borderBox { 
+      background-color: lawngreen; /* borderBox의 배경색을 연두색으로 변경 */
+      box-sizing: border-box; /* 박스 크기를 계산할 때 패딩과 보더를 포함하도록 설정 (IE Box Model 방식) */
+    }
+  </style>
+</head>
+
+</head>
+<body>
+  <div id="contentBox">W3C Box Model</div> 
+  <!-- contentBox라는 id를 가진 div 박스.
+       width=200px은 "콘텐츠 영역만" 기준이라 padding이 더해져서 실제 표시되는 크기는 더 커짐.
+       안에 들어가는 텍스트는 "W3C Box Model" -->
+
+  <div id="borderBox">IE Box Model</div> 
+  <!-- borderBox라는 id를 가진 div 박스.
+       width=200px을 줄 때 padding을 포함하여 전체가 200px이 되도록 계산 (border-box 속성 때문).
+       안에 들어가는 텍스트는 "IE Box Model" -->
+</body>
+</html>
+
+<!-- tip 폰트와 텍스트
+ 1) 폰트(font) : 글자와 정의된 글씨체의 관계를 다룹니다.(예: font-size: 16px;).
+ 2) 텍스트(text) : 화면에 표현되는 글자의 위치와 표현 방법을 다룹니다.(예: text-align: center;). 
+ -->
