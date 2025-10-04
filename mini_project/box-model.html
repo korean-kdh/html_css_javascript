@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스모델</title>
+  <!-- 미리보기에 나와있는 파란색 뒷 배경이 나오도록 만들 것 div를 div 클래스로 해서 제대로 지정할 것 -->
+  <style>
+    .wrapper {
+      background-color: deepskyblue;
+      margin: 10px 20px 30px 40px;
+      padding: 20px 40px 60px;
+       /* 파란 배경이 lightcoral 바깥까지 보이도록 여유 줌 */
+      display: inline-block; /* 내용물에 맞게 크기 지정 */
+    }
+    .dummyimage {
+      width: 300px;
+      height: 200px;
+      background-color: white;
+      margin: 10px 20px 30px 40px;
+      padding: 20px 40px 60px;
+      border: 10px solid lightcoral;
+    }
+
+    #contentBox, #borderBox{
+      width: 200px;
+      height: 100px;
+      margin: 10px 0;
+      padding: 0 50px;
+      background-color: lightcoral;
+    }
+
+    #borderBox {
+      background-color: lightblue;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body> 
+  <div class="wrapper">
+    <div class="dummyimage">
+      <img src="https://dummyimage.com/300x200/333/fff" alt="콘텐츠">
+    </div>
+  </div>
+
+  <div id="contentBox">W3C Box Model</div> <!-- 표준 W3C 방식 -->
+  <div id="borderBox">IE Box Model</div>   <!-- 옛날 IE처럼 작동 -->
+</body>
+</html>

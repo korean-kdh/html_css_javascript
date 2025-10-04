@@ -1,0 +1,28 @@
+<!DOCTYPE html>  <!-- DOCTYPE 선언 태그 : 이 문서가 HTML5 문서임을 브라우저에 알림 -->
+<html lang="ko"> <!-- html 태그 : HTML 문서 전체를 감싸는 루트(root) 태그, lang 속성으로 언어를 한국어(ko)로 지정 -->
+<head> <!-- head 태그 : 브라우저 화면에는 보이지 않지만, 문서 정보를 담는 영역 (메타데이터, 제목, 스타일, 스크립트 등) -->
+  <meta charset="UTF-8"> <!-- meta 태그 : 부가 정보를 제공하는 태그 / charset 속성으로 문서의 문자 인코딩을 UTF-8로 지정 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- meta 태그 : IE 브라우저에게 최신 렌더링 엔진(Edge 모드)을 사용하라고 지시 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- meta 태그 : 반응형 웹을 위한 설정 / 기기 화면 너비에 맞추고 확대 배율을 1.0으로 시작 -->
+  <title>블록요소와 인라인요소</title> <!-- title 태그 : 문서 제목 태그, 브라우저 탭이나 검색 결과에 표시됨 -->
+  <style> /* style 태그 : CSS를 작성하는 영역, HTML 태그들의 시각적 스타일(색상, 여백 등)을 정의 */
+    div { /* div 태그 : 블록(block) 요소 / 줄 전체를 차지하며 레이아웃을 구성할 때 주로 사용 */
+      margin: 10px 0; /* CSS 속성 : 위아래 여백 10px, 좌우 여백 없음 */
+      background-color: lightcoral; /* CSS 속성 : 배경색을 연한 산호색으로 지정 */
+    }
+
+    span { /* span 태그 : 인라인(inline) 요소 / 문장 안에서 일부 텍스트 구간을 묶을 때 사용 */
+      background-color: lightgreen; /* CSS 속성 : 배경색을 연한 초록으로 지정 */
+    }
+  </style>
+</head>
+<body> <!-- body 태그 : 실제 화면에 표시되는 본문을 담는 영역 -->
+  <div>블록 요소(block element)</div> <!-- div 태그 : 블록 요소, 줄 전체를 차지하며 배경색은 연한 산호색 -->
+  <div>블록 요소(block element)</div> <!-- div 태그 : 블록 요소, 줄 전체를 차지하며 배경색은 연한 산호색 -->
+  <div>블록 요소(block element)</div> <!-- div 태그 : 블록 요소, 줄 전체를 차지하며 배경색은 연한 산호색 -->
+  <span>인라인 요소(inline)</span> <!-- span 태그 : 인라인 요소, 옆으로 이어져 표시되고 배경색은 연한 초록 -->
+  <span>인라인 요소(inline)</span> <!-- span 태그 : 인라인 요소, 옆으로 이어져 표시되고 배경색은 연한 초록 -->
+  <span>인라인 요소(inline)</span> <!-- span 태그 : 인라인 요소, 옆으로 이어져 표시되고 배경색은 연한 초록 -->
+</body>
+</html> <!-- html 태그 종료 : 문서의 끝을 나타냄 -->
+  
