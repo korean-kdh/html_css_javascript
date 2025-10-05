@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 선택자
+    1. 아이디 선택자 와 클래스 선택자
+    2. 속성 선택자
+    3. 부모자식관계와 형제-자매 관계
+    4. 의사클래스와 의사요소
+    5. 명시도*/
+
+    /* 아이디 선택자 와 클래스 선택자  */
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: lightcoral;
+    }
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: lawngreen;
+      border-radius: 50%;
+    }
+
+    /* 속성 선택자 */
+    /*  속성 이름(attribute name)과 속성값(attribute value) 으로 정의
+      [속성이름], [속성이름=속성값 ] 
+      특정 요소를 가리키는 선택자입니다. 
+      특정 요소를 가리키는 선택자의 구성이 구체화될수록 선택자가 
+      적용되는 우선순위가 높아지는데, 이를 명시도(CSS specificity)라고 한다. */
+    [name] {
+      width: 200px;
+      padding: 5px 10px;
+      border: 1px solid lightcoral;
+    }
+
+    [name=passwd] {
+      border: 1px solid lightgrey;
+    }
+
+    input[name=passwd] {
+      border: 2px solid lightgreen;
+    }
+
+    /* 의사 클래스와 의사 요소 */
+    li:first-child {
+      background-color: lightcoral;
+    }
+
+    .item:hover {
+      cursor: pointer;
+      background-color: lightgreen;
+    }
+
+    /* 의사 클래스와 의사 요소 2 */
+    /* li:first-child::first-letter {
+      font-size: 200%;
+      color: #ff0000;
+    }
+
+    .item::after {
+      content: " - 중요함!";
+      color: magenta;
+    } */
+
+     /* 의사 클래스와 의사 요소 3 */
+     /* #mylist li:nth-of-type(1) {color: lightblue; }
+     #mylist li { color: lightgreen; }
+     ul.mylist li { color: lightpink; }
+     ul li { color: lightskyblue; }
+     li { color: lightseagreen; }
+     li { color: lightseagreen; }
+     li:nth-of-type(2) { color: yellow !important; } */
+  </style>
+</head>
+<body>
+  <h1>아이디 선택자 와 클래스 선택자 </h1>
+  <div class = "circle"></div>
+  <div id="box"></div>
+  <div class = "circle"></div>
+
+  <h1>속성 선택자</h1>
+  <p> HTML 요소(element)의 부가적인 정보로서 속성(attribute)을 식별자로 
+  사용하는 방법입니다. 속성은 속성 이름(attribute name)과 속성값(attribute value)
+  으로 정의됩니다. CSS에서 [속성이름], [속성이름=속성값 ]으로 표현됩니다.
+  [name]은 속성 이름이 name인 모든 요소를, [name=passwd]는 속성 이름이 name
+  인 요소 중에서 속성값이 passwd인 특정 요소를, input[name=passwd]는 input
+  중에서 속성 이름이 name인 요소를 대상으로 속성값이 passwd인 특정 요소를 가리키는
+  선택자입니다. 특정 요소를 가리키는 선택자의 구성이 구체화될수록 선택자가 
+  적용되는 우선순위가 높아지는데, 이를 명시도(CSS specificity)라고 합니다.</p>
+  <input type="text" name="userId" placeholder="아이디 입력하시오">
+  <input type="text" name="passwd" placeholder="비밀번호 입력하시오">
+
+  <h1>부모-자식 관계와 형제-자매 관계</h1>
+  <p>
+  웹페이지에서 HTML 요소가 많아 복잡해지면 이들 간의 관계를 이해해야 합니다.
+  부모-자식(parent-child)관계는 다음 코드에서 div와h3 또는 ol과 li와 같이
+  포함 관계에 있는 경우로 상자 내부에 상자를 포함하는 형태로 이해할 수 있습니다.
+  형제-자매(siblings) 관계는 3개의 li 요소처럼 이웃하는 형태입니다.
+  HTML 요소들의 관계는 각 가정의 가계도 또는 족보의 형태와 닮았습니다. 아버지나
+  할아버지처럼 수직 또는 포함 관계를 갖는 부분과 형제-자매처럼 수평관계를 갖는
+  부분으로 되어 있습니다.
+  기준이 되는 HTML 요소로부터 바로 위아래의 수직 관계는 부모(parent)와 자식(child)이고,
+  부모와 자식의 바깥은 조상(ancestors)과 자손(descendants)이고, 좌우의 수평관계는
+  형제-자매(siblings)라고 합니다.</p>
+  <div id = "container"></div>
+    <h3>목록의 제목</h3>
+    <ol class = "mylist">
+      <li>첫 번째 목록</li>
+      <li>두 번째 목록</li>
+      <li>세 번째 목록</li>
+    </ol>
+
+    <h1>의사클래스와 의사요소</h1>
+    <p>
+       의사 클래스(pseudo-class)는 '특정 상태'에 있는 요소를 선택하는 선택자로서 마우스 포인터로 
+      가리키고 있는 요소(.item:hover)나 해당 유형의 첫 번째 요소(li:first-child) 등을 가리킵니다.
+      의사(pseudo)는 가짜 또는 유사(similar)라는 의미입니다.
+      CSS 선택자로 표현할 경우 콜론(;)으로 시작합니다.
+      의사 요소(pseudo-element)는 의사 클래스와 비슷하나 '새로운 HTML'을 적용한 것
+      처럼 동작합니다. CSS 선택자로 표현할 경우 이중 콜론(::)으로 시작합니다.
+      명시도
+   명시도(CSS Specificity)는 CSS 선택자가 적용되는 우선순위를 결정하는 규칙입니다.
+   동일한 요소를 가리키는 여러 가지 선택자에 적용되는 우선순위를 가리키는 것으로 표현 
+   순서에서 나중에 나오거나 구체적이고 명확하게 표현하는 선택자가 높은 우선순위를
+   갖습니다.
+   <br>
+   태그 선택자, 의사 요소 -> 클래스 선택자, 속성 선택자, 의사 클래스 ->
+   아이디 선택자 -> 인라인 스타일
+   <br>
+   모든 요소를 가리키는 '*'로 표현되는 유니버셜 선택자(universal selector)가
+   가장 낮은 우선순위를 가지며, 태그 선택자, 클래스 선택자/속성 선택자,
+   아이디 선택자가 그리고 인라인 스타일 순서로 우선순위가 높아집니다.
+   가장 높은 우선순위의 표현은 !important를 사용하는 경우인데, 많이 사용하지
+   않는 것이 좋습니다. 최고 등급의 우선쉰로 표현될 경우, 이를 다른 명시도 표현으로
+   통제할 수 없기 때문입니다.
+    </p>
+
+    <ul>
+      <li>목록#1</li>
+      <li>목록#2</li>
+      <li class="item">목록#3</li>
+    </ul>
+
+    <!-- 의사 클래스와 의사 요소 3  -->
+    <!-- <ul id="mylist" class="mylist">
+      <li>홍길동</li>
+      <li style="color:lightcoral;">일지매</li>
+      <li>임꺽정</li>
+    </ul> -->
+</body>
+</html>
